@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 
 import logoIcon from '../../assets/images/logo.svg';
 import menuIcon from '../../assets/images/icon-hamburger.svg';
@@ -6,12 +6,14 @@ import closeIcon from '../../assets/images/icon-close.svg';
 
 const navLinks = ['about', 'careers', 'events', 'products', 'support'];
 
-export const Menu = () => {
+const Menu = ({ closeMenu }: { closeMenu: () => void }): JSX.Element => {
   return (
     <div>
       <div>
         <img src={logoIcon} alt="loopstudio's Logo Icon" />
-        <button role='navigation'>{closeIcon}</button>
+        <button role='navigation' onClick={closeMenu}>
+          {closeIcon}
+        </button>
       </div>
       <ul>
         {navLinks.map((link) => (
@@ -22,17 +24,22 @@ export const Menu = () => {
   );
 };
 
-const Navbar = () => {
+const Navbar = (): JSX.Element => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleOpenMenu = () => setIsMenuOpen(true);
+  const handleCloseMenu = () => setIsMenuOpen(false);
+
   return (
     <Fragment>
       <nav>
         <img src={logoIcon} alt="loopstudio's Logo Icon" />
 
-        <button role='navigation'>
+        <button role='navigation' onClick={handleOpenMenu}>
           <img src={menuIcon} role='presentation' />
         </button>
       </nav>
-      <Menu />
+      {isMenuOpen && <Menu closeMenu={handleCloseMenu} />}
     </Fragment>
   );
 };
