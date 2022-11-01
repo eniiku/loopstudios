@@ -1,11 +1,12 @@
 import { Fragment } from 'react';
-import { Hero } from './components';
+import { Hero, About } from './components';
 import './App.scss';
 
 const App = () => {
   return (
     <Fragment>
       <Hero />
+      <About />
     </Fragment>
   );
 };
