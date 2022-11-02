@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { Hero, About } from './components';
+import { Hero, About, Creations } from './components';
 import './App.scss';
 
 const App = () => {
@@ -7,6 +7,7 @@ const App = () => {
     <Fragment>
       <Hero />
       <About />
+      <Creations />
     </Fragment>
   );
 };
