@@ -1,14 +1,15 @@
 import { Fragment } from "react";
 
 import Navbar from "../Navbar/Navbar";
+import "./Hero.scss";
 
 const Hero = () => {
   return (
-    <div>
+    <div className="hero">
       <Navbar />
-      <div>
-        <h1>immersive experiences that deliver</h1>
-      </div>
+      <h1 className="hero__head heading-text">
+        immersive experiences that deliver
+      </h1>
     </div>
   );
 };
