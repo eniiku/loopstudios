@@ -15,10 +15,17 @@ body {
 }
 
 .app--container {
+  min-height: 90vh;
   padding: 1.4rem;
 }
 
 .heading-text {
   font-size: 1.6rem;
   text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.paragraph-text {
+  font-size: 0.8rem;
+  line-height: 1.8;
 }
