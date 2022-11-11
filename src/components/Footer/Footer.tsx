@@ -1,25 +1,28 @@
-import logoIcon from '../../assets/images/logo.svg';
+import logoIcon from "../../assets/images/logo.svg";
+import "./Footer.scss";
 
-const footerLinks = ['about', 'careers', 'events', 'products', 'support'];
+const footerLinks = ["about", "careers", "events", "products", "support"];
 const footerIcons = [
-  { text: 'facebook', iconLink: '/src/assets/images/icon-facebook.svg' },
-  { text: 'twitter', iconLink: '/src/assets/images/icon-twitter.svg' },
-  { text: 'pinterest', iconLink: '/src/assets/images/icon-pinterest.svg' },
-  { text: 'instagram', iconLink: '/src/assets/images/icon-instagram.svg' },
+  { text: "facebook", iconLink: "/src/assets/images/icon-facebook.svg" },
+  { text: "twitter", iconLink: "/src/assets/images/icon-twitter.svg" },
+  { text: "pinterest", iconLink: "/src/assets/images/icon-pinterest.svg" },
+  { text: "instagram", iconLink: "/src/assets/images/icon-instagram.svg" },
 ];
 
 const Footer = () => {
   return (
-    <footer>
-      <img src={logoIcon} alt='Loopstudios Logo' />
+    <footer className="footer">
+      <img src={logoIcon} alt="Loopstudios Logo" className="footer__logo" />
 
-      <ul>
+      <ul className="footer__link">
         {footerLinks.map((link) => (
-          <li key={link}>{link}</li>
+          <li key={link} className="footer__link-item">
+            {link}
+          </li>
         ))}
       </ul>
 
-      <ul>
+      <ul className="footer__icons">
         {footerIcons.map((icon) => (
           <li key={icon.text}>
             <img
@@ -30,7 +33,9 @@ const Footer = () => {
         ))}
       </ul>
 
-      <caption>&#169; 2021 Loopstudios. All rights reserved.</caption>
+      <p className="footer__caption">
+        &#169; 2021 Loopstudios. All rights reserved.
+      </p>
     </footer>
   );
 };
