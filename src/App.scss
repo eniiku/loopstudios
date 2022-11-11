@@ -23,9 +23,16 @@ body {
   font-size: 1.6rem;
   text-transform: uppercase;
   line-height: 1.4;
+  margin: 0;
+
+  &-white {
+    color: var(--white-clr);
+  }
 }
 
 .paragraph-text {
-  font-size: 0.8rem;
+  margin: 0;
   line-height: 1.8;
+  font-size: 0.8rem;
+  color: var(--dark-gray-clr);
 }

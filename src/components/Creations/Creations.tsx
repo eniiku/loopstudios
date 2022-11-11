@@ -1,3 +1,5 @@
+import "./Creations.scss";
+
 const creations = [
   {
     text: "deep earth",
@@ -35,20 +37,23 @@ const creations = [
 
 const Creations = () => {
   return (
-    <section>
-      <h1>our creations</h1>
-      <div>
+    <section className="creations app--container">
+      <h1 className="creations__head-text heading-text">our creations</h1>
+      <div className="creations__grid">
         {creations.map((creation) => (
-          <div key={creation.text}>
+          <div key={creation.text} className="creations__grid-item">
             <img
               src={creation.image}
               alt={`placeholder image for ${creation.text}`}
+              className="creations__grid-item-img"
             />
-            <h1>{creation.text}</h1>
+            <h1 className="creations__grid-item-text heading-text heading-text-white">
+              {creation.text}
+            </h1>
           </div>
         ))}
       </div>
-      <button>see all</button>
+      <button className="creations__btn">see all</button>
     </section>
   );
 };
