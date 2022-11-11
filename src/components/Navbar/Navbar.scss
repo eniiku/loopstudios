@@ -1,0 +1,41 @@
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  @include flex-between;
+
+  &__btn {
+    border: none;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    background: transparent;
+  }
+
+  &__menu {
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    padding: 1.4rem;
+    background: var(--black-clr);
+
+    &-header {
+      @include flex-between;
+    }
+
+    &-list {
+      padding: 0;
+      color: white;
+      margin-top: 7rem;
+      list-style-type: none;
+
+      &-items {
+        margin-bottom: 0.7rem;
+      }
+    }
+  }
+}

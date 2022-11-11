@@ -1,15 +1,15 @@
-import { Fragment } from 'react';
-import { Hero, About, Creations, Footer } from './components';
-import './App.scss';
+import { Fragment } from "react";
+import { Hero, About, Creations, Footer } from "./components";
+import "./App.scss";
 
 const App = () => {
   return (
-    <Fragment>
+    <div className="app">
       <Hero />
       <About />
       <Creations />
       <Footer />
-    </Fragment>
+    </div>
   );
 };
 
