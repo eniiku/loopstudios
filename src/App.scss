@@ -1,7 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+:root {
+  --white-clr: hsl(0, 0%, 100%);
+  --black-clr: hsl(0, 0%, 0%);
+  --dark-gray-clr: hsl(0, 0%, 55%);
+  --very-dark-gray-clr: hsl(0, 0%, 41%);
+}
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Alata', sans-serif;
+  box-sizing: border-box;
+  font-family: "Alata", sans-serif;
+}
+
+.app {
+  padding: 1.4rem;
+}
+
+.heading-text {
+  font-size: 1.6rem;
+  text-transform: uppercase;
 }
