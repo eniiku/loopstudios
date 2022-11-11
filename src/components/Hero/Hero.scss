@@ -1,0 +1,16 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  padding-top: 2rem;
+  background: pink;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/images/mobile/image-hero.jpg");
+
+  &__head {
+    border: 2px solid var(--white-clr);
+    padding: 1rem;
+    margin: 10rem 0;
+  }
+}
