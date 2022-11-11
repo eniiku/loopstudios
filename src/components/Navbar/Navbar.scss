@@ -6,6 +6,7 @@
 
 .nav {
   @include flex-between;
+  padding: 2rem 0;
 
   &__btn {
     border: none;

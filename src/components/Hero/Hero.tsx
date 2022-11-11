@@ -5,7 +5,7 @@ import "./Hero.scss";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <div className="hero app--container">
       <Navbar />
       <h1 className="hero__head heading-text">
         immersive experiences that deliver

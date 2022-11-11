@@ -4,12 +4,12 @@ import "./App.scss";
 
 const App = () => {
   return (
-    <div className="app">
+    <Fragment>
       <Hero />
       <About />
       <Creations />
       <Footer />
-    </div>
+    </Fragment>
   );
 };
 
