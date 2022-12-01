@@ -25,6 +25,7 @@ ul {
   padding: 1.4rem;
 
   @media screen and (min-width: 1024px) {
+    min-height: 100vh;
     padding: 2rem 8rem;
   }
 }
@@ -50,4 +51,10 @@ ul {
   line-height: 1.8;
   font-size: 0.8rem;
   color: var(--dark-gray-clr);
+
+  @media screen and (min-width: 1024px) {
+    width: 80%;
+    font-size: 0.9rem;
+    text-align: left;
+  }
 }
