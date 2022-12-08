@@ -8,12 +8,20 @@
   @include flex-between;
   padding: 2rem 0;
 
+  @media screen and (min-width: 768px) {
+    padding: 3rem 0;
+  }
+
   &__btn {
     border: none;
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
     background: transparent;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
 
   &__menu {
@@ -37,6 +45,21 @@
       &-items {
         margin-bottom: 0.7rem;
       }
+    }
+  }
+
+  &__links {
+    gap: 1.4rem;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+    &-items {
+      color: var(--white-clr);
+      text-transform: capitalize;
     }
   }
 }
