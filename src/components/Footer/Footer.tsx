@@ -1,4 +1,5 @@
 import logoIcon from '../../assets/images/logo.svg';
+import './Footer.scss';
 
 const footerLinks = ['about', 'careers', 'events', 'products', 'support'];
 const footerIcons = [
@@ -10,27 +11,46 @@ const footerIcons = [
 
 const Footer = () => {
   return (
-    <footer>
-      <img src={logoIcon} alt='Loopstudios Logo' />
+    <footer className='footer'>
+      <div className='footer-desktop-1'>
+        <img src={logoIcon} alt='Loopstudios Logo' className='footer__logo' />
 
-      <ul>
-        {footerLinks.map((link) => (
-          <li key={link}>{link}</li>
-        ))}
-      </ul>
+        <ul className='footer__icons-desktop'>
+          {footerIcons.map((icon) => (
+            <li key={icon.text}>
+              <img
+                src={icon.iconLink}
+                alt={`Loopstudios ${icon.text} social media handle`}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
 
-      <ul>
-        {footerIcons.map((icon) => (
-          <li key={icon.text}>
-            <img
-              src={icon.iconLink}
-              alt={`Loopstudios ${icon.text} social media handle`}
-            />
-          </li>
-        ))}
-      </ul>
+      <div className='footer-desktop-2'>
+        <ul className='footer__link'>
+          {footerLinks.map((link) => (
+            <li key={link} className='footer__link-item'>
+              {link}
+            </li>
+          ))}
+        </ul>
 
-      <caption>&#169; 2021 Loopstudios. All rights reserved.</caption>
+        <ul className='footer__icons'>
+          {footerIcons.map((icon) => (
+            <li key={icon.text}>
+              <img
+                src={icon.iconLink}
+                alt={`Loopstudios ${icon.text} social media handle`}
+              />
+            </li>
+          ))}
+        </ul>
+
+        <p className='footer__caption'>
+          &#169; 2021 Loopstudios. All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 };
