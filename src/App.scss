@@ -1,7 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
 
+:root {
+  --white-clr: hsl(0, 0%, 100%);
+  --black-clr: hsl(0, 0%, 0%);
+  --dark-gray-clr: hsl(0, 0%, 55%);
+  --very-dark-gray-clr: hsl(0, 0%, 41%);
+}
+
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Alata', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app--container {
+  min-height: 90vh;
+  padding: 1.4rem;
+
+  @media screen and (min-width: 1024px) {
+    min-height: 100vh;
+    padding: 2rem 10rem;
+  }
+}
+
+.heading-text {
+  text-transform: uppercase;
+  line-height: 1.4;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 3.2rem;
+    line-height: normal;
+    text-align: left;
+  }
+
+  &-white {
+    color: var(--white-clr);
+  }
+}
+
+.paragraph-text {
+  margin: 0;
+  line-height: 1.8;
+  font-size: 0.8rem;
+  color: var(--dark-gray-clr);
+
+  @media screen and (min-width: 1024px) {
+    width: 80%;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+}
+
+// Creations Section
+
+.creations-font {
+  font-family: 'Josefin Sans', sans-serif;
 }
