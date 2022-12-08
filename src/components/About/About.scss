@@ -1,14 +1,32 @@
 .about {
   display: grid;
+  position: relative;
   place-content: center;
+
+  @media screen and (min-width: 1024px) {
+    justify-content: start;
+  }
 
   &__img {
     width: 100%;
     margin-bottom: 2rem;
+
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
   }
 
   &__text {
     text-align: center;
+
+    @media screen and (min-width: 1024px) {
+      right: 0;
+      bottom: 0;
+      width: 40%;
+      padding: 4rem;
+      position: absolute;
+      background: var(--white-clr);
+    }
   }
 
   &__text-head {
