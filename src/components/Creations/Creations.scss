@@ -50,8 +50,9 @@
         display: none;
 
         @media screen and (min-width: 1024px) {
-          display: block;
-          width: 16rem;
+          display: flex;
+          align-items: flex-end;
+          width: 14rem;
           height: 70vh;
         }
       }
@@ -67,8 +68,11 @@
       &-text {
         width: 10ch;
         padding: 0.7rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
 
         @media screen and (min-width: 1024px) {
+          width: 50%;
           color: var(--white-clr);
           text-transform: uppercase;
           padding: 1rem 2.6rem;
@@ -80,10 +84,12 @@
   &__btn {
     margin: 2rem 0;
     font-size: 1rem;
+    font-weight: 300;
     padding: 0.5rem 1.8rem;
     background: transparent;
     text-transform: uppercase;
     border: 1px solid var(--black-clr);
+    font-family: 'Josefin Sans', sans-serif;
 
     &-mobile {
       @media screen and (min-width: 1024px) {
