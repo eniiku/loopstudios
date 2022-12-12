@@ -3,11 +3,12 @@ import { Fragment, useState } from 'react';
 import logoIcon from '../../assets/images/logo.svg';
 import menuIcon from '../../assets/images/icon-hamburger.svg';
 import closeIcon from '../../assets/images/icon-close.svg';
+import Link from '../Link/Link';
 import './Navbar.scss';
 
 const navLinks = ['about', 'careers', 'events', 'products', 'support'];
 
-const Menu = ({ closeMenu }: { closeMenu: () => void }): JSX.Element => {
+const Menu = ({ closeMenu }: { closeMenu: () => void }) => {
   return (
     <div className='nav__menu'>
       <div className='nav__menu-header'>
@@ -19,7 +20,7 @@ const Menu = ({ closeMenu }: { closeMenu: () => void }): JSX.Element => {
       <ul className='nav__menu-list'>
         {navLinks.map((link) => (
           <li key={link} className='nav__menu-list-items heading-text'>
-            {link}
+            <link>{link}</link>
           </li>
         ))}
       </ul>
@@ -27,7 +28,7 @@ const Menu = ({ closeMenu }: { closeMenu: () => void }): JSX.Element => {
   );
 };
 
-const Navbar = (): JSX.Element => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleOpenMenu = () => setIsMenuOpen(true);
@@ -47,7 +48,7 @@ const Navbar = (): JSX.Element => {
         <ul className='nav__links'>
           {navLinks.map((navLink) => (
             <li key={navLink} className='nav__links-items'>
-              {navLink}
+              <Link>{navLink}</Link>
             </li>
           ))}
         </ul>
