@@ -38,6 +38,16 @@
       background-color: rgba(0, 0, 0, 0.3);
       background-blend-mode: overlay;
 
+      transition: all 500ms ease-out 50ms;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      &:hover &-text {
+        color: var(--black-clr);
+      }
+
       &-mobile {
         width: 100%;
         height: 10rem;
@@ -90,6 +100,13 @@
     text-transform: uppercase;
     border: 1px solid var(--black-clr);
     font-family: 'Josefin Sans', sans-serif;
+
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      background: var(--black-clr);
+      color: var(--white-clr);
+    }
 
     &-mobile {
       @media screen and (min-width: 1024px) {
