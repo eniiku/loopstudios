@@ -1,4 +1,5 @@
 import logoIcon from '../../assets/images/logo.svg';
+import Link from '../Link/Link';
 import './Footer.scss';
 
 const footerLinks = ['about', 'careers', 'events', 'products', 'support'];
@@ -18,10 +19,12 @@ const Footer = () => {
         <ul className='footer__icons-desktop'>
           {footerIcons.map((icon) => (
             <li key={icon.text}>
-              <img
-                src={icon.iconLink}
-                alt={`Loopstudios ${icon.text} social media handle`}
-              />
+              <Link>
+                <img
+                  src={icon.iconLink}
+                  alt={`Loopstudios ${icon.text} social media handle`}
+                />
+              </Link>
             </li>
           ))}
         </ul>
@@ -31,7 +34,7 @@ const Footer = () => {
         <ul className='footer__link'>
           {footerLinks.map((link) => (
             <li key={link} className='footer__link-item'>
-              {link}
+              <Link>{link}</Link>
             </li>
           ))}
         </ul>
@@ -39,10 +42,12 @@ const Footer = () => {
         <ul className='footer__icons'>
           {footerIcons.map((icon) => (
             <li key={icon.text}>
-              <img
-                src={icon.iconLink}
-                alt={`Loopstudios ${icon.text} social media handle`}
-              />
+              <Link>
+                <img
+                  src={icon.iconLink}
+                  alt={`Loopstudios ${icon.text} social media handle`}
+                />
+              </Link>
             </li>
           ))}
         </ul>
